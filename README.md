@@ -9,6 +9,6 @@ Eclipse/IntelliJ IDEA Instructions
 
 Prerequisites:
 
-• Install Eclipse, the Maven plugin, and optionally the GitHub plugin. • Set up Eclipse Preferences
+• Install Eclipse/IntelliJ IDEA, the Maven plugin, and optionally the GitHub plugin. • Set up Eclipse Preferences
 
 • Window > Preferences... (or on Mac, Eclipse > Preferences...)
