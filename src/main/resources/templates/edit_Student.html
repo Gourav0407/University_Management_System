@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns:th="http://www.thymleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Student Management System</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li><a th:href="@{/students}"> Students </a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<br>
+<br>
+
+<div class="container" style="border: 2px solid black;">
+
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sum-6 container justify-content-center card">
+            <h1 class="text-center">Update New Student</h1>
+            <div class="card-body">
+                <form th:action="@{/students/{id} (id=${student.id})}" th:object="${student}" method="POST">
+                    <div class="form-group">
+                        <label> Student First Name</label>
+                        <input
+                                type="text"
+                                name="firstName"
+                                th:field="*{firstName}"
+                                class="form-control"
+                                placeholder="Enter Student First Name"
+                        />
+                    </div>
+
+                    <div class="form-group">
+                        <label> Student Last Name</label>
+                        <input
+                                type="text"
+                                name="lastName"
+                                th:field="*{lastName}"
+                                class="form-control"
+                                placeholder="Enter Student Last Name"
+                        />
+                    </div>
+
+                    <div class="form-group">
+                        <label> Student Email</label>
+                        <input
+                                type="text"
+                                name="email"
+                                th:field="*{email}  "
+                                class="form-control"
+                                placeholder="Enter Student Email"
+                        />
+                    </div>
+
+                    <div class="box-footer">
+                        <button type="submit" class="btn btn-primary">
+                            Submit
+                        </button>
+                        <br>
+                        <br>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
