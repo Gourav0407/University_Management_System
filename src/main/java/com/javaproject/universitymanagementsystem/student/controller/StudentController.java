@@ -1,16 +1,13 @@
-package com.javaproject.studentmanagementsystem.controller;
+package com.javaproject.universitymanagementsystem.student.controller;
 
-import com.javaproject.studentmanagementsystem.entity.Student;
-import com.javaproject.studentmanagementsystem.repository.StudentRepository;
-import com.javaproject.studentmanagementsystem.service.StudentService;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.javaproject.universitymanagementsystem.student.entity.Student;
+import com.javaproject.universitymanagementsystem.student.service.StudentService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.service.annotation.GetExchange;
 
 @Controller
 public class StudentController {
@@ -45,7 +42,7 @@ public class StudentController {
     @GetMapping("/students/edit/{id}")
     public String editStudentForm(@PathVariable Long id,Model model){
         model.addAttribute("student",studentService.getStudentById(id));
-        return "edit_Student";
+        return "edit_student";
     }
 
     @PostMapping("/student/{id}")

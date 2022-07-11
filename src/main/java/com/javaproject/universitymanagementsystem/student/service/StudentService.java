@@ -1,7 +1,6 @@
-package com.javaproject.studentmanagementsystem.service;
+package com.javaproject.universitymanagementsystem.student.service;
 
-import com.javaproject.studentmanagementsystem.controller.StudentController;
-import com.javaproject.studentmanagementsystem.entity.Student;
+import com.javaproject.universitymanagementsystem.student.entity.Student;
 
 import java.util.List;
 
